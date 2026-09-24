@@ -189,7 +189,7 @@ with open(".\\start-build.ps1", "w+") as f:
 	[string]$Thumbprint
 )
 
-.\\build.ps1 -Thumbprint $Thumbprint -CabName '{config['package']}{PUBLIC_KEY_TOKEN}{config['target_arch']}{config['version']}.cab'""")
+.\\build.ps1 -Thumbprint $Thumbprint -CabName '{config['package']}~{PUBLIC_KEY_TOKEN}~{config['target_arch']}~~{config['version']}.cab'""")
 
 if not tempDir == None:
     with open(".\\start-build.ps1", 'a') as f:
